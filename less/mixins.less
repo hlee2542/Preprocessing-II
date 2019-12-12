@@ -1,1 +1,14 @@
 // Mixins in here
+.flex-maker(@dir) {
+    display: flex;
+    flex-direction: @dir;
+}
+
+.button-maker(@btn-txt-col, @btn-bg-color, @btn-txt-size, @roundness) {
+    text-align: center;
+    padding: 5% 0%;
+    font-size: @btn-txt-size;
+    border-radius: @roundness;
+    background-color: @btn-bg-color;
+    color: @btn-txt-col;
+}
