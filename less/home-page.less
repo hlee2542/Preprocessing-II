@@ -1,5 +1,14 @@
 .home {
 
+  .header {
+    .flex-maker(column);
+    border-bottom: 2px dashed @navigation-border;
+
+    .bus-text {
+      padding: 2% 0%;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -21,6 +30,14 @@
         border-radius: 10px;
       }
     }
+
+    @media @mobile {
+      .flex-maker(column);
+      .text-content, .img-content {
+        width: 100%;
+        padding: 0%;
+      }
+    }
   }
 
   .inverse-content {
@@ -36,6 +53,10 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media @mobile {
+      .flex-maker(column-reverse);
+    }
   }
 
   .content-destination {
@@ -44,6 +65,11 @@
 
     img {
       border-radius: 10px;
+    }
+    @media @mobile {
+      width: 100%;
+      margin: 0%;
+      padding: 0% 0% 5%;
     }
   }
 
@@ -56,6 +82,17 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn {
+        .button-maker(@white, @button-bg, @btn-txt-size, @roundness);
+      }
+      @media @mobile {
+        width: 90%;
+        margin: 4% auto;
+      }
+    }
+    @media @mobile {
+      .flex-maker(column);
+      padding: 3% 0%;
     }
   }
 }// home

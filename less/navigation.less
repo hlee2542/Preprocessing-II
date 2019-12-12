@@ -1,1 +1,38 @@
 // Navigation Styles here
+.nav-root-container {
+    border-bottom: 2px dashed @navigation-border;
+    padding: 2% 0%;
+}
+.nav-container {
+    .flex-maker(row);
+    align-items: center;
+    margin: 0% auto;
+    .nav-entry-container {
+        .flex-maker(row);
+        width: 40%;
+        nav {
+            font-size: @nav-size;
+            width: 25%;
+        }
+    }
+    .logo-container {
+        width: 60%;
+    }
+    @media @mobile {
+        .flex-maker(column);
+        .logo-container {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-entry-container {
+            .flex-maker(row);
+            width: 100%;
+            padding: 1% 0%;
+            nav {
+                font-size: @nav-size;
+                width: 25%;
+                text-align: center;
+            }
+        }
+    }
+}
